@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     width: 310,
     height: 420,
-    contentOffset: {x:10, y:10},
+    // contentOffset: {x:10, y:10},
   },
   navbar: {
     backgroundColor: '#FB836F',
