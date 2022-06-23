@@ -2,30 +2,33 @@ import { ScrollView } from "react-native";
 import Item from "./Item";
 import { example } from "../data/exampleList";
 import { StyleSheet } from "react-native";
+import { View } from "react-native";
 
 const ShoppingList = () => {
   return (
+<View style={styles.container}>
     <ScrollView contentContainerStyle = {styles.frame}>
     {example.map((item) => {
       return (<Item key={item} product={item}/>)
     })}
-  </ScrollView>
+    </ScrollView>
+  </View>
   )
 }
 
 export default ShoppingList;
 
 const styles = StyleSheet.create({
-
-    frame: {
-      backgroundColor: '#fff',
-      justifyContent: 'space-between',
-      marginTop: 20,
-      borderWidth: 1,
-      borderColor: 'black',
-      width: 310,
-      height: 420,
-      padding: 10,
-    },
+  container:{
+    height:350,
+  },
+  frame: {
+    backgroundColor: '#fff',
+    justifyContent: 'space-between',
+    borderWidth: 1,
+    borderColor: 'black',
+    width: 310,
+    padding: 10,
+  },
   
   });
