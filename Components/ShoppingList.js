@@ -23,12 +23,12 @@ const styles = StyleSheet.create({
     height:350,
   },
   frame: {
-    backgroundColor: '#fff',
+    backgroundColor: 'lightgrey',
     justifyContent: 'space-between',
+    alignItems: 'flex-end',
     borderWidth: 1,
     borderColor: 'black',
     width: 310,
-    padding: 10,
   },
   
   });

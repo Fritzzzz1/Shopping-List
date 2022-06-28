@@ -13,22 +13,22 @@ const SearchBar = ({clicked, searchPhrase, setSearchPhrase, setCLicked}) => {
         }
       >
         {/* search Icon */}
-        <Feather
-          name="search"
-          size={20}
-          color="black"
-          style={{ marginLeft: 1 }}
-        />
         {/* Input field */}
         <TextInput
           style={styles.input}
-          placeholder="Search"
+          placeholder="פילטר"
           value={searchPhrase}
           onChangeText={setSearchPhrase}
           onFocus={() => {
             setClicked(true);
           }}
         />
+          <Feather
+            name="search"
+            size={20}
+            color="black"
+            style={{ marginLeft: 1 }}
+          />
         {/* cross Icon, depending on whether the search bar is clicked or not */}
         {clicked && (
           <Entypo name="cross" size={20} color="black" style={{ padding: 1 }} onPress={() => {
@@ -57,9 +57,8 @@ export default SearchBar;
 const styles = StyleSheet.create({
   container: {
     margin: 15,
-    
     justifyContent: "flex-start",
-    alignItems: "center",
+    alignItems: "flex-end",
     flexDirection: "row",
     width: "90%",
 
@@ -70,7 +69,8 @@ const styles = StyleSheet.create({
     width: "95%",
     backgroundColor: "#d9dbda",
     borderRadius: 15,
-    alignItems: "center",
+    alignContent: 'space-around',
+    alignItems: 'flex-end'
   },
   searchBar__clicked: {
     padding: 10,
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
   },
   input: {
     fontSize: 20,
-    marginLeft: 10,
-    width: "90%",
+    marginLeft: 215,
+    marginRight: 15,
   },
 });

@@ -21,7 +21,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#6fffe9',
+    backgroundColor: '#8AAAE5',
     alignItems: 'center',
     flex: 1,
   },
@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
   page: {
     marginTop: 40,
     // backgroundColor: '#9dedad',
+    // backgroundColor: '#6fffe9',
     height: 500,
     alignItems: 'center',
     justifyContent:'center'

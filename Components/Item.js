@@ -6,14 +6,14 @@ const Item = ({product}) => {
     const [marked, setMarked] = useState(false)
   return (
     <View style={styles.line}>
+        <Text style={marked ? styles.marked : styles.product}>{product}</Text>
         <BouncyCheckbox
-        size={15}
-        fillColor="lightgreen"
+        size={30}
+        fillColor="lightblue"
         unfillColor="#FFFFFF"
-        iconStyle={{ borderColor: "green" }}
+        iconStyle={{ borderColor: "lightblue" }}
         onPress={() => {setMarked(!marked)}}
         />
-        <Text style={marked ? styles.marked : styles.product}>{product}</Text>
     </View>
   )
 }
@@ -22,13 +22,12 @@ export default Item;
 
 const styles = StyleSheet.create({
     product: {
-        fontSize: 15,
-        height: 30,
+        fontSize: 30,
         margin: 2,
+        marginRight: 10,
     },
     marked: {
-        fontSize: 15,
-        height: 30,
+        fontSize: 30,
         margin: 2,
 
         textDecorationLine: 'line-through'
@@ -36,7 +35,8 @@ const styles = StyleSheet.create({
     line: {
         flex:1,
         flexDirection: 'row',
-        height: 30,
-        lineHeight: 30,
-    }
+        height: 50,
+        marginRight: 5,
+        alignItems: 'center',
+       }
 })
